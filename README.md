@@ -1,6 +1,6 @@
 Assignment-Tidy-Data
 ====================
-I used the read.table function to load the different files needed, which are kept under a folder /data in the working directory. I set as.is=TRUE to have integers and numbers instead of factors.
+I used the read.table function to load the different files needed, which are kept under a folder /data in the working directory. I assume that the files have been downloaded and extracted already. I set as.is=TRUE to have integers and numbers instead of factors.
 I used cbind to join subject_train, Y_train and X_train (7352 rows), then did the same for subject_test, Y_test and X_test (2947 rows) then used rbind to merge the train and test data sets. The resulting data.frame has dimension 10299 by 563
 After loading features.txt, I applied grep successively to "mean()" and "std()" (with fixed=TRUE) to retrieve only the actual mean and standard deviation (33 variables for each), leaving aside the variables with meanFreq.
 I then used a subset of the original data.frame, keeping only the subject of the activity number (integer from 1 to 6), the subject number (integer from 1 to 30) and the 33*2 means and standard deviations. I then renamed  the columns of the data.frame thanks to colnames.
