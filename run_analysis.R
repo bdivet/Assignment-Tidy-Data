@@ -20,5 +20,3 @@ split.data<-split(data,list(data$subject,data$activity))
 mean.df<-sapply(split.data,function(x) colMeans(x[,-c(1,2,dim(data)[2])],na.rm=TRUE))
 write.table(mean.df,file="tidy.txt",sep="\t",quote=FALSE)
 
-library(plyr)
-test=ddply(data,.c(activity,subject), function(.xyz) )
